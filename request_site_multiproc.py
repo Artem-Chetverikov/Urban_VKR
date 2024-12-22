@@ -110,7 +110,7 @@ def runner(quantity, plot_fig=False, save_fig=False) -> float:
     f.set_size_inches(8, 8)
     ax.plot(list(range(1, quantity + 1)), np.array(time_lst), color='green', marker='o', markersize=7)
     ax.axline((0, mean_time), (quantity, mean_time), color='red', linestyle='dashed')
-    plt.xlabel('Время c запуска программы')  # Подпись для оси х
+    plt.xlabel('Итерация')  # Подпись для оси х
     plt.ylabel('Время выполнения запросов, сек')  # Подпись для оси y
     plt.title(f'Время выполнения запросов (по процессам), среднее - {round(mean_time,2)} сек.')  # Название
     ax.set_ylim([0, 5])
