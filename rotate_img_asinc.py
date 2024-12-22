@@ -100,4 +100,4 @@ def runner(quantity, plot_fig=False, save_fig=False) -> float:
 
 
 if __name__ == "__main__":
-    runner(20, plot_fig=True, save_fig=True)
+    runner(50, plot_fig=True, save_fig=True)
