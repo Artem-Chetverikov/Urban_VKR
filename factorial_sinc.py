@@ -5,6 +5,7 @@ import sys
 import time
 import pathlib
 import matplotlib.pyplot as plt
+import numpy as np
 
 # Настраиваем логирование
 logging.basicConfig(
@@ -68,7 +69,7 @@ def runner(quantity, plot_fig=False, save_fig=False) -> float:
     # строим график по полученным значениям
     f, ax = plt.subplots(1)
     f.set_size_inches(8, 8)
-    ax.plot(list(range(1, quantity + 1)), time_lst, color='green', marker='o', markersize=7)
+    ax.plot(list(range(1, quantity + 1)), np.array(time_lst), color='green', marker='o', markersize=7)
     ax.axline((0, mean_time), (quantity, mean_time), color='red', linestyle='dashed')
     plt.xlabel('Итерация')  # Подпись для оси х
     plt.ylabel('Время вычисления факториала, сек')  # Подпись для оси y
